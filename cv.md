@@ -49,3 +49,8 @@ function peak(arr) {
 
 ### Languages:
 * **English:** Intermediate / Upper-Intermediate
+
+
+
+### Interests:
+* Open-source software and web design
