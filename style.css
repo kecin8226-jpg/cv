@@ -1,9 +1,7 @@
-/* Универсальный селектор */
 * {
     box-sizing: border-box;
 }
 
-/* Базовые стили для body + прижатие footer к низу */
 body {
     margin: 0;
     padding: 0;
@@ -12,14 +10,14 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between;
+    background-color: #fcfcfc;
+    color: #333;
 }
 
-/* Плавный скролл по якорным ссылкам */
 html {
     scroll-behavior: smooth;
 }
 
-/* Ограничивающий контейнер */
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -27,7 +25,11 @@ html {
     padding: 0 20px;
 }
 
-/* Стили навигации */
+.main-header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
 .nav-list {
     display: flex;
     justify-content: flex-end;
@@ -40,9 +42,10 @@ html {
 .nav-link {
     display: block;
     padding: 0 20px;
-    line-height: 50px;
+    line-height: 60px;
     text-decoration: none;
     color: #8259b5;
+    font-weight: 700;
     transition: color 0.3s;
 }
 
@@ -50,14 +53,14 @@ html {
     color: #4d2323;
 }
 
-/* Сетка для секций (в две колонки на десктопе) */
 .main-container {
     display: flex;
     flex-wrap: wrap;
     max-width: 1440px;
     margin: 0 auto;
     width: 100%;
-    padding: 20px;
+    padding: 40px 20px;
+    flex-grow: 1;
 }
 
 .section {
@@ -65,26 +68,45 @@ html {
     padding: 20px;
 }
 
-.avatar {
-    width: 121px;
-    height: 121px;
-    border-radius: 50%;
-    object-fit: cover;
+.section-title {
+    color: #4d2323;
+    border-bottom: 2px solid #8259b5;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
 
-/* --- АДАПТИВНОСТЬ (Медиазапросы) --- */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #8259b5;
+    margin: 15px 0;
+}
 
-/* Планшетная версия */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* --- ╨Р╨Ф╨Р╨Я╨в╨Ш╨Т╨Э╨Ю╨б╨в╨м --- */
+
 @media (max-width: 768px) {
     .section {
-        width: 100%; /* Секции встают во всю ширину */
+        width: 100%;
     }
 }
 
-/* Мобильная версия (для адаптивного меню) */
 @media (max-width: 320px) {
     .nav-list {
-        flex-direction: column; /* Элементы меню вертикально */
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+    .nav-link {
+        line-height: 40px;
     }
 }
